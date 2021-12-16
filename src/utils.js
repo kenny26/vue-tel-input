@@ -185,6 +185,13 @@ export const allProps = [
     inDemo: false,
   },
   {
+    name: 'inputOptions.showDialCodeAsPrefix',
+    default: false,
+    type: Boolean,
+    description: 'Show dial code in input as prefix',
+    inDemo: false,
+  },
+  {
     name: 'inputOptions.placeholder',
     default: 'Enter a phone number',
     type: String,
