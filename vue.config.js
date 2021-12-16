@@ -8,6 +8,7 @@ module.exports = {
       new CopyPlugin([
         { from: path.resolve(__dirname, 'src/assets/component.css'), to: 'css/' },
         { from: path.resolve(__dirname, 'src/assets/sprite.css'), to: 'css/' },
+        { from: path.resolve(__dirname, 'src/index.d.ts'), to: 'vue-tel-input.umd.min.d.ts' },
       ])
     ]
   },
