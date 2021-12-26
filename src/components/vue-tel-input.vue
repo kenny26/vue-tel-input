@@ -19,9 +19,10 @@
           v-if="dropdownOptions.showFlags"
           :class="['vti__flag', activeCountryCode.toLowerCase()]"
         ></span>
-        <span v-if="dropdownOptions.showDialCodeInSelection" class="vti__country-code">
-          +{{ activeCountry && activeCountry.dialCode }}
-        </span>
+        <span
+          v-if="dropdownOptions.showDialCodeInSelection"
+          class="vti__country-code"
+        >+{{ activeCountry && activeCountry.dialCode }}</span>
         <slot name="arrow-icon" :open="open">
           <span class="vti__dropdown-arrow">{{ open ? "▲" : "▼" }}</span>
         </slot>
@@ -57,10 +58,16 @@
             :class="['vti__flag', pb.iso2.toLowerCase()]"
           ></span>
           <strong>{{ pb.name }}</strong>
-          <span v-if="dropdownOptions.showDialCodeInList"> +{{ pb.dialCode }} </span>
+          <span v-if="dropdownOptions.showDialCodeInList">+{{ pb.dialCode }}</span>
         </li>
       </ul>
     </div>
+
+    <div
+      v-if="inputOptions.showDialCodeAsPrefix"
+      class="vti__prefix"
+    >+{{ activeCountry && activeCountry.dialCode }}-</div>
+
     <input
       v-model="phone"
       ref="input"
@@ -260,8 +267,10 @@ export default {
         ...phoneObject
       } = result;
 
-      let valid = result.isValid?.();
-      let formatted = this.phone;
+      const phoneNumber = this.parseModelValue(this.phone);
+
+      let valid = (result.isValid?.()) || false;
+      let formatted = phoneNumber;
 
       if (valid) {
         formatted = result.format?.(this.parsedMode.toUpperCase());
@@ -279,6 +288,7 @@ export default {
         valid,
         country: this.activeCountry,
         formatted,
+        number: phoneObject.number || phoneNumber,
       });
 
       return phoneObject;
@@ -305,14 +315,11 @@ export default {
       if (!this.autoFormat || this.customValidate) {
         return;
       }
-      this.emitInput(value);
 
-      this.$nextTick(() => {
-        // In case `v-model` is not set, we need to update the `phone` to be new formatted value
-        if (value && !this.value) {
-          this.phone = value;
-        }
-      });
+      this.phone = this.parseInputValue(value);
+    },
+    'phoneObject.number': function (value) {
+      this.emitInput(value);
     },
     // finishMounted() {
     //   this.resetPlaceholder();
@@ -320,14 +327,15 @@ export default {
     'inputOptions.placeholder': function () {
       this.resetPlaceholder();
     },
-    value(value, oldValue) {
-      if (!this.testCharacters()) {
-        this.$nextTick(() => {
-          this.phone = oldValue;
-          this.onInput();
-        });
-      } else {
-        this.phone = value;
+    value(value) {
+      if (value !== this.phoneObject.number) {
+        if (!this.testCharacters()) {
+          this.$nextTick(() => {
+            this.emitInput(this.phoneObject.number);
+          });
+        } else {
+          this.phone = value.trim();
+        }
       }
     },
     open(isDropdownOpened) {
@@ -349,9 +357,12 @@ export default {
 
     this.initializeCountry()
       .then(() => {
-        if (!this.phone
+        if (
+          !this.phone
           && this.inputOptions?.showDialCode
-          && this.activeCountryCode) {
+          && this.activeCountryCode
+          && !this.inputOptions?.showDialCodeAsPrefix
+        ) {
           this.phone = `+${this.activeCountryCode}`;
         }
         this.$emit('validate', this.phoneObject);
@@ -489,10 +500,8 @@ export default {
 
       // update value, even if international mode is NOT used
       this.activeCountryCode = parsedCountry.iso2 || '';
-      this.emitInput(this.phone);
     },
     cleanInvalidCharacters() {
-      const currentPhone = this.phone;
       if (this.validCharactersOnly) {
         const results = this.phone.match(/[()\-+0-9\s]*/g);
         this.phone = results.join('');
@@ -501,10 +510,6 @@ export default {
       if (this.customValidate && this.customValidate instanceof RegExp) {
         const results = this.phone.match(this.customValidate);
         this.phone = results.join('');
-      }
-
-      if (currentPhone !== this.phone) {
-        this.emitInput(this.phone);
       }
     },
     testCharacters() {
@@ -527,7 +532,6 @@ export default {
       // Returns response.number to assign it to v-model (if being used)
       // Returns full response for cases @input is used
       // and parent wants to return the whole response.
-      this.emitInput(this.phone);
     },
     emitInput(value) {
       this.$emit('input', value, this.phoneObject, this.$refs.input);
@@ -631,6 +635,45 @@ export default {
       } else {
         this.dropdownOpenDirection = 'above';
       }
+    },
+    parseInputValue(value) {
+      let inputValue = value;
+      if (
+        this.inputOptions?.showDialCodeAsPrefix
+        && inputValue
+        && this.activeCountry
+      ) {
+        const cleanValue = value.replace(/\s+/g, '');
+        if (cleanValue.startsWith(`+${this.activeCountry.dialCode}`)) {
+          let dialCodeEndIndex = 0;
+          let dialCodeCheckIndex = 0;
+          for (dialCodeEndIndex; dialCodeEndIndex < value.length; dialCodeEndIndex += 1) {
+            if (dialCodeCheckIndex === this.activeCountry.dialCode.length) {
+              break;
+            }
+            if (
+              value.charAt(dialCodeEndIndex)
+              === this.activeCountry.dialCode.charAt(dialCodeCheckIndex)
+            ) {
+              dialCodeCheckIndex += 1;
+            }
+          }
+          inputValue = inputValue.slice(dialCodeEndIndex).trim();
+        }
+      }
+      return inputValue;
+    },
+    parseModelValue(value) {
+      let parsedValue = value;
+      if (
+        this.inputOptions?.showDialCodeAsPrefix
+        && parsedValue
+        && parsedValue[0] !== '+'
+        && this.activeCountry
+      ) {
+        parsedValue = `+${this.activeCountry.dialCode}${value}`;
+      }
+      return parsedValue;
     },
   },
 };
