@@ -23,17 +23,15 @@
 }
 .vue-tel-input:focus-within {
   border-color: var(--vti-focus-border-color);
-
-  .vti__dropdown {
-    border-color: var(--vti-focus-border-color);
-  }
+}
+.vue-tel-input:focus-within .vti__dropdown {
+  border-color: var(--vti-focus-border-color);
 }
 .vue-tel-input:hover:not(:focus-within) {
   border-color: var(--vti-hover-border-color);
-
-  .vti__dropdown {
-    border-color: var(--vti-hover-border-color);
-  }
+}
+.vue-tel-input:hover:not(:focus-within) .vti__dropdown {
+  border-color: var(--vti-hover-border-color);
 }
 .vti__dropdown {
   display: flex;
@@ -123,12 +121,13 @@
   background-color: var(--vti-bg-color);
   color: var(--vti-text-color);
   padding-left: 7px;
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: var(--vti-placeholder-color);
-  }
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: var(--vti-placeholder-color);
-  }
+}
+.vti__input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--vti-placeholder-color);
+  opacity: 1;
+}
+.vti__input::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--vti-placeholder-color);
 }
 .vti__search_box {
   border: 1px solid #ccc;
