@@ -2395,6 +2395,13 @@ module.exports = function (bitmap, value) {
 
 /***/ }),
 
+/***/ "5ca0":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "605d":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2615,8 +2622,8 @@ module.exports = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_component_css_vue_type_style_index_1_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("8e3a");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_component_css_vue_type_style_index_1_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_component_css_vue_type_style_index_1_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_cli_service_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_component_css_vue_type_style_index_1_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("9f6a");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_cli_service_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_component_css_vue_type_style_index_1_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_cli_service_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_component_css_vue_type_style_index_1_lang_css__WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
 
 
@@ -2993,13 +3000,6 @@ module.exports = typeof WeakMap === 'function' && /native code/.test(inspectSour
 
 /***/ }),
 
-/***/ "821a":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
 /***/ "825a":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3180,13 +3180,6 @@ module.exports = function (S, index, unicode) {
 /***/ (function(module, exports) {
 
 module.exports = require("vue");
-
-/***/ }),
-
-/***/ "8e3a":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -3480,6 +3473,13 @@ module.exports = function (IteratorConstructor, NAME, next) {
   return IteratorConstructor;
 };
 
+
+/***/ }),
+
+/***/ "9f6a":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -4474,8 +4474,8 @@ module.exports = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_sprite_css_vue_type_style_index_0_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("821a");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_sprite_css_vue_type_style_index_0_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_sprite_css_vue_type_style_index_0_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_cli_service_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_sprite_css_vue_type_style_index_0_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("5ca0");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_cli_service_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_sprite_css_vue_type_style_index_0_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_cli_service_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_sprite_css_vue_type_style_index_0_lang_css__WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
 
 
@@ -5028,6 +5028,25 @@ $({ target: 'Array', proto: true, forced: !HAS_SPECIES_SUPPORT }, {
 
 /***/ }),
 
+/***/ "d959":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+// runtime helper for setting properties on components
+// in a tree-shakable way
+exports.default = (sfc, props) => {
+    const target = sfc.__vccOpts || sfc;
+    for (const [key, val] of props) {
+        target[key] = val;
+    }
+    return target;
+};
+
+
+/***/ }),
+
 /***/ "da84":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5320,7 +5339,7 @@ var es_function_name = __webpack_require__("b0c0");
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/components/vue-tel-input.vue?vue&type=template&id=0aac15c6
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--0-1!./src/components/vue-tel-input.vue?vue&type=template&id=6a1a3af7
 
 
 var _hoisted_1 = {
@@ -5349,58 +5368,67 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     class: ['vue-tel-input', $props.styleClasses, {
       disabled: $props.disabled
     }]
-  }, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withDirectives"])(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("div", {
-    "aria-label": "Country Code Selector",
-    "aria-haspopup": "listbox",
-    "aria-expanded": $data.open,
-    role: "button",
-    class: ['vti__dropdown', {
-      open: $data.open,
-      disabled: $props.dropdownOptions.disabled
-    }],
-    tabindex: $props.dropdownOptions.tabindex,
-    onKeydown: [_cache[1] || (_cache[1] = function () {
-      return $options.keyboardNav && $options.keyboardNav.apply($options, arguments);
-    }), _cache[3] || (_cache[3] = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withKeys"])(function () {
-      return $options.toggleDropdown && $options.toggleDropdown.apply($options, arguments);
-    }, ["space"])), _cache[4] || (_cache[4] = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withKeys"])(function () {
-      return $options.reset && $options.reset.apply($options, arguments);
-    }, ["esc"])), _cache[5] || (_cache[5] = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withKeys"])(function () {
-      return $options.reset && $options.reset.apply($options, arguments);
-    }, ["tab"]))],
-    onClick: _cache[2] || (_cache[2] = function () {
-      return $options.toggleDropdown && $options.toggleDropdown.apply($options, arguments);
-    })
-  }, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("span", _hoisted_1, [$props.dropdownOptions.showFlags ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("span", {
-    key: 0,
-    class: ['vti__flag', $data.activeCountryCode.toLowerCase()]
-  }, null, 2)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true), $props.dropdownOptions.showDialCodeInSelection ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("span", _hoisted_2, "+" + Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])($options.activeCountry && $options.activeCountry.dialCode), 1)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderSlot"])(_ctx.$slots, "arrow-icon", {
-    open: $data.open
+  }, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderSlot"])(_ctx.$slots, "dropdown", {
+    activeCountry: $options.activeCountry,
+    choose: $options.choose
   }, function () {
-    return [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("span", _hoisted_3, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])($data.open ? "▲" : "▼"), 1)];
-  })]), $data.open ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("ul", {
-    key: 0,
-    ref: "list",
-    class: ["vti__dropdown-list", $data.dropdownOpenDirection],
-    role: "listbox"
-  }, [(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])(external_commonjs_vue_commonjs2_vue_root_Vue_["Fragment"], null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderList"])($options.sortedCountries, function (pb, index) {
-    return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("li", {
-      key: pb.iso2 + (pb.preferred ? '-preferred' : ''),
-      role: "option",
-      class: ['vti__dropdown-item', $options.getItemClass(index, pb.iso2)],
-      tabindex: "-1",
-      "aria-selected": $data.activeCountryCode === pb.iso2 && !pb.preferred,
-      onClick: function onClick($event) {
-        return $options.choose(pb);
-      },
-      onMousemove: function onMousemove($event) {
-        return $data.selectedIndex = index;
-      }
-    }, [$props.dropdownOptions.showFlags ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("span", {
+    return [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withDirectives"])(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("div", {
+      "aria-label": "Country Code Selector",
+      "aria-haspopup": "listbox",
+      "aria-expanded": $data.open,
+      role: "button",
+      class: ['vti__dropdown', {
+        open: $data.open,
+        disabled: $props.dropdownOptions.disabled
+      }],
+      tabindex: $props.dropdownOptions.tabindex,
+      onKeydown: [_cache[1] || (_cache[1] = function () {
+        return $options.keyboardNav && $options.keyboardNav.apply($options, arguments);
+      }), _cache[3] || (_cache[3] = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withKeys"])(function () {
+        return $options.toggleDropdown && $options.toggleDropdown.apply($options, arguments);
+      }, ["space"])), _cache[4] || (_cache[4] = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withKeys"])(function () {
+        return $options.reset && $options.reset.apply($options, arguments);
+      }, ["esc"])), _cache[5] || (_cache[5] = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withKeys"])(function () {
+        return $options.reset && $options.reset.apply($options, arguments);
+      }, ["tab"]))],
+      onClick: _cache[2] || (_cache[2] = function () {
+        return $options.toggleDropdown && $options.toggleDropdown.apply($options, arguments);
+      })
+    }, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("span", _hoisted_1, [$props.dropdownOptions.showFlags ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("span", {
       key: 0,
-      class: ['vti__flag', pb.iso2.toLowerCase()]
-    }, null, 2)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("strong", null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(pb.name), 1), $props.dropdownOptions.showDialCodeInList ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("span", _hoisted_4, "+" + Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(pb.dialCode), 1)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true)], 42, ["aria-selected", "onClick", "onMousemove"]);
-  }), 128))], 2)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true)], 42, ["aria-expanded", "tabindex"]), [[_directive_click_outside, $options.clickedOutside]]), (_$props$inputOptions = $props.inputOptions) !== null && _$props$inputOptions !== void 0 && _$props$inputOptions.showDialCodeAsPrefix ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("div", _hoisted_5, "+" + Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])($options.activeCountry && $options.activeCountry.dialCode) + "-", 1)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withDirectives"])(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("input", {
+      class: ['vti__flag', $data.activeCountryCode.toLowerCase()]
+    }, null, 2)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true), $props.dropdownOptions.showDialCodeInSelection ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("span", _hoisted_2, "+" + Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])($options.activeCountry && $options.activeCountry.dialCode), 1)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderSlot"])(_ctx.$slots, "arrow-icon", {
+      open: $data.open
+    }, function () {
+      return [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("span", _hoisted_3, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])($data.open ? "▲" : "▼"), 1)];
+    })]), $data.open ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("ul", {
+      key: 0,
+      ref: "list",
+      class: ["vti__dropdown-list", $data.dropdownOpenDirection],
+      role: "listbox"
+    }, [(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])(external_commonjs_vue_commonjs2_vue_root_Vue_["Fragment"], null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderList"])($options.sortedCountries, function (pb, index) {
+      return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("li", {
+        key: pb.iso2 + (pb.preferred ? '-preferred' : ''),
+        role: "option",
+        class: ['vti__dropdown-item', $options.getItemClass(index, pb.iso2)],
+        tabindex: "-1",
+        "aria-selected": $data.activeCountryCode === pb.iso2 && !pb.preferred,
+        onClick: function onClick($event) {
+          return $options.choose(pb);
+        },
+        onMousemove: function onMousemove($event) {
+          return $data.selectedIndex = index;
+        }
+      }, [$props.dropdownOptions.showFlags ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("span", {
+        key: 0,
+        class: ['vti__flag', pb.iso2.toLowerCase()]
+      }, null, 2)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("strong", null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(pb.name), 1), $props.dropdownOptions.showDialCodeInList ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("span", _hoisted_4, "+" + Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(pb.dialCode), 1)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true)], 42, ["aria-selected", "onClick", "onMousemove"]);
+    }), 128))], 2)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true)], 42, ["aria-expanded", "tabindex"]), [[_directive_click_outside, $options.clickedOutside]])];
+  }), (_$props$inputOptions = $props.inputOptions) !== null && _$props$inputOptions !== void 0 && _$props$inputOptions.showDialCodeAsPrefix ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("div", _hoisted_5, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderSlot"])(_ctx.$slots, "prefix", {
+    activeCountry: $options.activeCountry
+  }, function () {
+    return [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createTextVNode"])(" +" + Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])($options.activeCountry && $options.activeCountry.dialCode) + "- ", 1)];
+  })])) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withDirectives"])(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("input", {
     id: $props.inputOptions.id,
     ref: "input",
     "onUpdate:modelValue": _cache[6] || (_cache[6] = function ($event) {
@@ -5434,7 +5462,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }, ["space"]))]
   }, null, 42, ["id", "type", "autocomplete", "autofocus", "disabled", "maxlength", "name", "placeholder", "readonly", "required", "tabindex", "aria-describedby"]), [[external_commonjs_vue_commonjs2_vue_root_Vue_["vModelDynamic"], $data.phone]]), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderSlot"])(_ctx.$slots, "icon-right")], 2);
 }
-// CONCATENATED MODULE: ./src/components/vue-tel-input.vue?vue&type=template&id=0aac15c6
+// CONCATENATED MODULE: ./src/components/vue-tel-input.vue?vue&type=template&id=6a1a3af7
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js + 1 modules
 var objectWithoutProperties = __webpack_require__("15fd");
@@ -8512,7 +8540,7 @@ var utils = __webpack_require__("025e");
     document.body.removeEventListener('click', el.clickOutsideEvent);
   }
 });
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/components/vue-tel-input.vue?vue&type=script&lang=js
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--0-1!./src/components/vue-tel-input.vue?vue&type=script&lang=js
 
 
 
@@ -9238,6 +9266,10 @@ var spritevue_type_style_index_0_lang_css = __webpack_require__("bfe1");
 // EXTERNAL MODULE: ./src/assets/component.css?vue&type=style&index=1&lang=css
 var componentvue_type_style_index_1_lang_css = __webpack_require__("6b2d");
 
+// EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/exportHelper.js
+var exportHelper = __webpack_require__("d959");
+var exportHelper_default = /*#__PURE__*/__webpack_require__.n(exportHelper);
+
 // CONCATENATED MODULE: ./src/components/vue-tel-input.vue
 
 
@@ -9245,9 +9277,11 @@ var componentvue_type_style_index_1_lang_css = __webpack_require__("6b2d");
 
 
 
-vue_tel_inputvue_type_script_lang_js.render = render
 
-/* harmony default export */ var vue_tel_input = __webpack_exports__["a"] = (vue_tel_inputvue_type_script_lang_js);
+
+const __exports__ = /*#__PURE__*/exportHelper_default()(vue_tel_inputvue_type_script_lang_js, [['render',render]])
+
+/* harmony default export */ var vue_tel_input = __webpack_exports__["a"] = (__exports__);
 
 /***/ }),
 
