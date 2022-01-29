@@ -1,10 +1,6 @@
 <template>
   <div :class="['vue-tel-input', styleClasses, { disabled: disabled }]">
-    <slot
-      name="dropdown"
-      :activeCountry="activeCountry"
-      :choose="choose"
-    >
+    <slot name="dropdown" :activeCountry="activeCountry" :choose="choose">
       <div
         v-click-outside="clickedOutside"
         aria-label="Country Code Selector"
@@ -57,13 +53,10 @@
       </div>
     </slot>
 
-    <div
-      v-if="inputOptions?.showDialCodeAsPrefix"
-      class="vti__prefix"
-    >
+    <div v-if="inputOptions?.showDialCodeAsPrefix" class="vti__prefix">
       <slot
         name="prefix"
-        v-bind:activeCountry="activeCountry"
+        :activeCountry="activeCountry"
       >
         +{{ activeCountry && activeCountry.dialCode }}-
       </slot>
@@ -90,7 +83,7 @@
       @input="onInput"
       @keyup.enter="onEnter"
       @keyup.space="onSpace"
-    />
+    >
     <slot name="icon-right" />
   </div>
 </template>
@@ -308,7 +301,9 @@ export default {
       }
 
       if (this.inputOptions?.showDialCodeAsPrefix) {
-        this.phone = this.parseInputValue(value);
+        this.$nextTick(() => {
+          this.phone = this.parseInputValue(value);
+        });
       } else {
         this.emitInput(value);
       }
@@ -332,13 +327,13 @@ export default {
       this.resetPlaceholder();
     },
     modelValue(value, oldValue) {
-      if (!this.testCharacters()) {
+      if (!this.testCharacters(value)) {
         this.$nextTick(() => {
           this.phone = oldValue;
           this.onInput();
         });
       } else if (this.inputOptions?.showDialCodeAsPrefix) {
-        this.phone = this.parseInputValue(this.phoneObject.formatted);
+        this.phone = this.parseInputValue(value);
       } else {
         this.phone = value;
       }
@@ -355,11 +350,7 @@ export default {
   },
   mounted() {
     if (this.modelValue) {
-      if (this.inputOptions?.showDialCodeAsPrefix) {
-        this.phone = this.parseInputValue(this.phoneObject.formatted);
-      } else {
-        this.phone = this.modelValue.trim();
-      }
+      this.phone = this.modelValue.trim();
     }
 
     this.cleanInvalidCharacters();
@@ -529,9 +520,9 @@ export default {
         this.emitInput(this.parseModelValue(this.phone));
       }
     },
-    testCharacters() {
+    testCharacters(value) {
       if (this.validCharactersOnly) {
-        const result = /^[()\-+0-9\s]*$/.test(this.phone);
+        const result = /^[()\-+0-9\s]*$/.test(value);
         if (!result) {
           return false;
         }
@@ -541,8 +532,8 @@ export default {
       }
       return true;
     },
-    testCustomValidate() {
-      return this.customValidate instanceof RegExp ? this.customValidate.test(this.phone) : false;
+    testCustomValidate(value) {
+      return this.customValidate instanceof RegExp ? this.customValidate.test(value) : false;
     },
     onInput() {
       this.$refs.input.setCustomValidity(this.phoneObject.valid ? '' : this.invalidMsg);

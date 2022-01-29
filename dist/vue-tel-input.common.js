@@ -5339,7 +5339,7 @@ var es_function_name = __webpack_require__("b0c0");
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--0-1!./src/components/vue-tel-input.vue?vue&type=template&id=6a1a3af7
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--0-1!./src/components/vue-tel-input.vue?vue&type=template&id=1ac72282
 
 
 var _hoisted_1 = {
@@ -5462,7 +5462,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }, ["space"]))]
   }, null, 42, ["id", "type", "autocomplete", "autofocus", "disabled", "maxlength", "name", "placeholder", "readonly", "required", "tabindex", "aria-describedby"]), [[external_commonjs_vue_commonjs2_vue_root_Vue_["vModelDynamic"], $data.phone]]), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderSlot"])(_ctx.$slots, "icon-right")], 2);
 }
-// CONCATENATED MODULE: ./src/components/vue-tel-input.vue?vue&type=template&id=6a1a3af7
+// CONCATENATED MODULE: ./src/components/vue-tel-input.vue?vue&type=template&id=1ac72282
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js + 1 modules
 var objectWithoutProperties = __webpack_require__("15fd");
@@ -8828,7 +8828,9 @@ function getDefault(key) {
       }
 
       if ((_this$inputOptions = this.inputOptions) !== null && _this$inputOptions !== void 0 && _this$inputOptions.showDialCodeAsPrefix) {
-        this.phone = this.parseInputValue(value);
+        this.$nextTick(function () {
+          _this2.phone = _this2.parseInputValue(value);
+        });
       } else {
         this.emitInput(value);
       }
@@ -8857,14 +8859,14 @@ function getDefault(key) {
       var _this3 = this,
           _this$inputOptions3;
 
-      if (!this.testCharacters()) {
+      if (!this.testCharacters(value)) {
         this.$nextTick(function () {
           _this3.phone = oldValue;
 
           _this3.onInput();
         });
       } else if ((_this$inputOptions3 = this.inputOptions) !== null && _this$inputOptions3 !== void 0 && _this$inputOptions3.showDialCodeAsPrefix) {
-        this.phone = this.parseInputValue(this.phoneObject.formatted);
+        this.phone = this.parseInputValue(value);
       } else {
         this.phone = value;
       }
@@ -8883,13 +8885,7 @@ function getDefault(key) {
     var _this4 = this;
 
     if (this.modelValue) {
-      var _this$inputOptions4;
-
-      if ((_this$inputOptions4 = this.inputOptions) !== null && _this$inputOptions4 !== void 0 && _this$inputOptions4.showDialCodeAsPrefix) {
-        this.phone = this.parseInputValue(this.phoneObject.formatted);
-      } else {
-        this.phone = this.modelValue.trim();
-      }
+      this.phone = this.modelValue.trim();
     }
 
     this.cleanInvalidCharacters();
@@ -9022,7 +9018,7 @@ function getDefault(key) {
       };
     },
     choose: function choose(country) {
-      var _this$phone2, _this$inputOptions5;
+      var _this$phone2, _this$inputOptions4;
 
       var parsedCountry = country;
 
@@ -9041,7 +9037,7 @@ function getDefault(key) {
         return;
       }
 
-      if ((_this$inputOptions5 = this.inputOptions) !== null && _this$inputOptions5 !== void 0 && _this$inputOptions5.showDialCode && parsedCountry) {
+      if ((_this$inputOptions4 = this.inputOptions) !== null && _this$inputOptions4 !== void 0 && _this$inputOptions4.showDialCode && parsedCountry) {
         // Reset phone if the showDialCode is set
         this.phone = "+".concat(parsedCountry.dialCode);
         this.activeCountryCode = parsedCountry.iso2 || '';
@@ -9073,9 +9069,9 @@ function getDefault(key) {
         this.emitInput(this.parseModelValue(this.phone));
       }
     },
-    testCharacters: function testCharacters() {
+    testCharacters: function testCharacters(value) {
       if (this.validCharactersOnly) {
-        var result = /^[()\-+0-9\s]*$/.test(this.phone);
+        var result = /^[()\-+0-9\s]*$/.test(value);
 
         if (!result) {
           return false;
@@ -9088,17 +9084,17 @@ function getDefault(key) {
 
       return true;
     },
-    testCustomValidate: function testCustomValidate() {
-      return this.customValidate instanceof RegExp ? this.customValidate.test(this.phone) : false;
+    testCustomValidate: function testCustomValidate(value) {
+      return this.customValidate instanceof RegExp ? this.customValidate.test(value) : false;
     },
     onInput: function onInput() {
-      var _this$inputOptions6;
+      var _this$inputOptions5;
 
       this.$refs.input.setCustomValidity(this.phoneObject.valid ? '' : this.invalidMsg); // Returns response.number to assign it to v-model (if being used)
       // Returns full response for cases @input is used
       // and parent wants to return the whole response.
 
-      if (!((_this$inputOptions6 = this.inputOptions) !== null && _this$inputOptions6 !== void 0 && _this$inputOptions6.showDialCodeAsPrefix)) {
+      if (!((_this$inputOptions5 = this.inputOptions) !== null && _this$inputOptions5 !== void 0 && _this$inputOptions5.showDialCodeAsPrefix)) {
         this.emitInput(this.parseModelValue(this.phone));
       }
     },
@@ -9218,11 +9214,11 @@ function getDefault(key) {
       }
     },
     parseInputValue: function parseInputValue(value) {
-      var _this$inputOptions7;
+      var _this$inputOptions6;
 
       var inputValue = value;
 
-      if ((_this$inputOptions7 = this.inputOptions) !== null && _this$inputOptions7 !== void 0 && _this$inputOptions7.showDialCodeAsPrefix && inputValue && this.activeCountry) {
+      if ((_this$inputOptions6 = this.inputOptions) !== null && _this$inputOptions6 !== void 0 && _this$inputOptions6.showDialCodeAsPrefix && inputValue && this.activeCountry) {
         var cleanValue = value.replace(/\s+/g, '');
 
         if (cleanValue.startsWith("+".concat(this.activeCountry.dialCode))) {
@@ -9246,11 +9242,11 @@ function getDefault(key) {
       return inputValue;
     },
     parseModelValue: function parseModelValue(value) {
-      var _this$inputOptions8;
+      var _this$inputOptions7;
 
       var parsedValue = value;
 
-      if ((_this$inputOptions8 = this.inputOptions) !== null && _this$inputOptions8 !== void 0 && _this$inputOptions8.showDialCodeAsPrefix && parsedValue && parsedValue[0] !== '+' && this.activeCountry) {
+      if ((_this$inputOptions7 = this.inputOptions) !== null && _this$inputOptions7 !== void 0 && _this$inputOptions7.showDialCodeAsPrefix && parsedValue && parsedValue[0] !== '+' && this.activeCountry) {
         parsedValue = "+".concat(this.activeCountry.dialCode).concat(value);
       }
 
